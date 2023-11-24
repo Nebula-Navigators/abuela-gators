@@ -7,9 +7,9 @@ import com.pluralsight.OrderTypeListFolder.Sandwich.Sandwich;
 import java.util.ArrayList;
 
 public class Order {
-    ArrayList<Sandwich> sandwiches = new ArrayList<Sandwich>();
-    ArrayList<Drink> drinks = new ArrayList<Drink>();
-    ArrayList<Chip> chips = new ArrayList<Chip>();
+    ArrayList<Sandwich> sandwiches = new ArrayList<>();
+    ArrayList<Drink> drinks = new ArrayList<>();
+    ArrayList<Chip> chips = new ArrayList<>();
 
 
     public void addSandwich(Sandwich sandwich)
@@ -17,14 +17,14 @@ public class Order {
        this.sandwiches.add(sandwich);
 
     }
-    public void addDrink(Drink d)
+    public void add_drink(Drink d)
     {
-        this.addDrink(d);
+        this.drinks.add(d);
 
     }
-    public void addChips(Chip c)
+    public void add_Chips(Chip c)
     {
-        this.addChips(c);
+        this.chips.add(c);
     }
 
 
