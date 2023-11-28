@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import com.pluralsight.Order;
 
 public class Receipt {
-   Order orders = new Order();
-   LocalDate date;
-   String customerName;
+   private Order orders = new Order();
+   private String customerName;
    final String storeName = "Abuela-Gators";
 
 

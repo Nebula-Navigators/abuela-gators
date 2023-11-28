@@ -4,8 +4,8 @@ package com.pluralsight.OrderTypeListFolder.Drink;
 import com.pluralsight.OrderTypeListFolder.Size;
 
 public class Drink {
-    private final DrinkType drink;
-    private final double price;
+    private DrinkType drink;
+    private double price;
 
     public Size getSizeForDrink() {
         return sizeForDrink;

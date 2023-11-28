@@ -9,6 +9,12 @@ import com.pluralsight.OrderTypeListFolder.Sandwich.BreadType;
 import com.pluralsight.OrderTypeListFolder.Sandwich.Sandwich;
 import com.pluralsight.OrderTypeListFolder.Sandwich.Topping;
 import com.pluralsight.OrderTypeListFolder.Size;
+import com.pluralsight.Receipts.Receipt;
+import com.pluralsight.Receipts.ReceiptFileManager;
+
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 
 public class SystemDataHandler {
@@ -141,6 +147,20 @@ public class SystemDataHandler {
             );
         }
 
+    }
+
+    public Receipt getReceipt(String customerName)
+    {
+        Receipt receipt = new Receipt();
+        receipt.setCustomerName(customerName);
+        LocalDateTime date = LocalDateTime.now();
+        DateTimeFormatter yearTime = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
+        String fileName = date.format(yearTime);
+        receipt.setOrders(this.orders);
+
+        ReceiptFileManager manager = new ReceiptFileManager();
+        manager.addReceiptInfile(receipt, fileName);
+       return receipt;
     }
 
 }

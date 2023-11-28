@@ -7,6 +7,7 @@ import com.pluralsight.OrderTypeListFolder.Sandwich.ListOfToppings.CheeseType;
 import com.pluralsight.OrderTypeListFolder.Sandwich.ListOfToppings.MeatType;
 import com.pluralsight.OrderTypeListFolder.Sandwich.Topping;
 import com.pluralsight.OrderTypeListFolder.Size;
+import com.pluralsight.Receipts.Receipt;
 
 import java.util.Scanner;
 
@@ -602,7 +603,8 @@ public class UserInterface {
                 case 1 -> {
                     System.out.println("Please enter your name.");
                     String name = scanner.nextLine();
-                    displayReceiptScreen();
+                    Receipt bill = handler.getReceipt(name);
+                    displayReceiptScreen(bill);
                     running = false;
                 }
                 case 0 -> running = false;
@@ -613,6 +615,6 @@ public class UserInterface {
         }
     }
 
-    private void displayReceiptScreen() {
+    private void displayReceiptScreen(Receipt bill) {
     }
 }
