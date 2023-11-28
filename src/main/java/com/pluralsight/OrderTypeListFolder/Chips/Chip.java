@@ -3,6 +3,11 @@ package com.pluralsight.OrderTypeListFolder.Chips;
 
 public class Chip {
     private ChipType chipName;
+
+    public double getPrice() {
+        return price;
+    }
+
     private final double price = 1.50;
 
 
@@ -11,4 +16,5 @@ public class Chip {
     }
 
     public ChipType getChipName() { return this.chipName; }
+
 }

@@ -1,10 +1,5 @@
 package com.pluralsight.OrderTypeListFolder.Sandwich;
-
 import com.pluralsight.OrderTypeListFolder.Size;
-
-import java.util.ArrayList;
-
-// Assuming you have the BreadType and Topping classes in the same package or correctly imported
 
 public class Sandwich {
     private final BreadType bread;
@@ -13,20 +8,45 @@ public class Sandwich {
     Topping toppings = new Topping();
 
     private final boolean isToasted;
-    private final double price;
+    private double price = 0.00;
 
-    public Sandwich(BreadType bread, Size size, int quantity, boolean isToasted, double price) {
+    public Sandwich(BreadType bread, Size size, int quantity, Topping topping, boolean isToasted) {
         this.bread = bread;
         this.size = size;
         this.quantity = quantity;
+        this.toppings = topping;
         this.isToasted = isToasted;
+    }
+    public void setPrice(double price)
+    {
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return String.format("""
-               %s, %s, %d, %b, %.2f
-                """, bread, size, quantity, isToasted, price);
+    public BreadType getBread() {
+        return bread;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public Topping getToppings() {
+        return toppings;
+    }
+
+    public void setToppings(Topping toppings) {
+        this.toppings = toppings;
+    }
+
+    public boolean isToasted() {
+        return isToasted;
+    }
+
+    public double getPrice() {
+        return this.price;
     }
 }
