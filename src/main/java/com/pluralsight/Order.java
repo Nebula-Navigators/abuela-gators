@@ -7,25 +7,26 @@ import com.pluralsight.OrderTypeListFolder.Sandwich.Sandwich;
 import java.util.ArrayList;
 
 public class Order {
-    ArrayList<Sandwich> sandwiches = new ArrayList<>();
-    ArrayList<Drink> drinks = new ArrayList<>();
-    ArrayList<Chip> chips = new ArrayList<>();
+    private ArrayList<Sandwich> sandwiches = new ArrayList<>();
 
+    private ArrayList<Drink> drinks = new ArrayList<>();
+    private ArrayList<Chip> chips = new ArrayList<>();
 
-    public void addSandwich(Sandwich sandwich)
-    {
-        this.sandwiches.add(sandwich);
-
+    public ArrayList<Sandwich> getSandwiches() {
+        return sandwiches;
     }
-    public void add_drink(Drink d)
-    {
-        this.drinks.add(d);
 
+    public ArrayList<Drink> getDrinks() {
+        return drinks;
     }
-    public void add_Chips(Chip c)
-    {
-        this.chips.add(c);
+
+    public ArrayList<Chip> getChips() {
+        return chips;
     }
+
+
+    public void add_drink(Drink d) {this.drinks.add(d);}
+    public void add_Chips(Chip c) {this.chips.add(c);}
 
 
 
