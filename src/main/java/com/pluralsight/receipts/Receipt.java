@@ -1,13 +1,25 @@
-package com.pluralsight.Receipts;
+package com.pluralsight.receipts;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import com.pluralsight.Order;
 
 public class Receipt {
    private Order orders = new Order();
    private String customerName;
+
+   public String getStoreName() {
+      return storeName;
+   }
+
+   public String getStoreAddress() {
+      return storeAddress;
+   }
+
    final String storeName = "Abuela-Gators";
+
+   final String storeAddress = "23-34 NewYork, NY";
+
+
+//   final float storeNumber = 7182337187;
 
 
    public Order getOrders() {

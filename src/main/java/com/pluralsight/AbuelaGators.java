@@ -5,6 +5,6 @@ public class AbuelaGators {
         //Customer enter the store
         // Our employee greets the customer
         UserInterface customerService = new UserInterface();
-        customerService.displayHomeScreen();
+        customerService.start();
     }
 }

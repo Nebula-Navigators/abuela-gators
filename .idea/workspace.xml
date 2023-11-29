@@ -5,12 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac9c3d8b-7f40-428d-ab51-e6fcd75f5283" name="Changes" comment="Fix some error">
-      <change afterPath="$PROJECT_DIR$/20231128-035201.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20231129-025027.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20231129-025220.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/20231129-025836.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/screens/CheckoutScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/screens/ChipScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/screens/DrinkScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/screens/HomeScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/screens/OrderScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/screens/SandwichScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Drink/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Drink/Drink.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipts/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipts/Receipt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipts/ReceiptFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipts/ReceiptFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/SystemDataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/SystemDataHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20231128-035201.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/AbuelaGators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/AbuelaGators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Chips/Chip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/chips/Chip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Chips/ChipType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/chips/ChipType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Drink/Drink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/drink/Drink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Drink/DrinkType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/drink/DrinkType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Sandwich/BreadType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/sandwich/BreadType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Sandwich/ListOfToppings/CheeseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/sandwich/toppings/CheeseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Sandwich/ListOfToppings/MeatType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/sandwich/toppings/MeatType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Sandwich/Sandwich.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/sandwich/Sandwich.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Sandwich/Topping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/sandwich/Topping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderTypeListFolder/Size.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/type/Size.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipts/Receipt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/receipts/Receipt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Receipts/ReceiptFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/receipts/ReceiptFileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/SystemDataHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/OrderManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/UserInterface.java" afterDir="false" />
     </list>
     <list id="5939c778-52d7-4b67-be04-3697515628cf" name="Changes by Student" comment="" />
@@ -55,24 +75,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultPlantUmlFileTemplate": "UML Class",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/shankaralemagar/Desktop/abuela-gators",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeWithMe",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/shankaralemagar/Desktop/abuela-gators&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.pluralsight.OrderTypeListFolder.Sandwich" />
@@ -90,6 +110,9 @@
       <updated>1700583349281</updated>
       <workItem from="1701090329985" duration="150000" />
       <workItem from="1701107683689" duration="5246000" />
+      <workItem from="1701273253398" duration="218000" />
+      <workItem from="1701274638962" duration="1282000" />
+      <workItem from="1701276654957" duration="176000" />
     </task>
     <task id="LOCAL-00001" summary="Added some things">
       <option name="closed" value="true" />

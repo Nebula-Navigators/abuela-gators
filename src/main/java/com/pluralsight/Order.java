@@ -1,19 +1,28 @@
 package com.pluralsight;
 
-import com.pluralsight.OrderTypeListFolder.Chips.Chip;
-import com.pluralsight.OrderTypeListFolder.Drink.Drink;
-import com.pluralsight.OrderTypeListFolder.Sandwich.Sandwich;
+import com.pluralsight.type.chips.Chip;
+import com.pluralsight.type.drink.Drink;
+import com.pluralsight.type.sandwich.Sandwich;
 
 import java.util.ArrayList;
 
 public class Order {
-    ArrayList<Sandwich> sandwiches = new ArrayList<>();
-    ArrayList<Drink> drinks = new ArrayList<>();
-    ArrayList<Chip> chips = new ArrayList<>();
+    private ArrayList<Sandwich> sandwiches = new ArrayList<>();
+    private ArrayList<Drink> drinks = new ArrayList<>();
+    private ArrayList<Chip> chips = new ArrayList<>();
 
     private final double tax = 0.15;
 
-    double total;
+    private double total;
+
+    private double totalAmountAfterTax;
+
+    public double getTotalAmountAfterTax() {
+        return totalAmountAfterTax;
+    }
+    public boolean isNotEmpty() {
+        return !sandwiches.isEmpty() || !drinks.isEmpty() || !chips.isEmpty();
+    }
 
     public void setTotal(double total) {
         this.total = total;
@@ -55,15 +64,15 @@ public class Order {
         this.chips = chips;
     }
 
-    public void add_drink(Drink d) {
+    public void addDrink(Drink d) {
         this.drinks.add(d);
     }
 
-    public void add_Chips(Chip c) {
+    public void addChips(Chip c) {
         this.chips.add(c);
     }
 
-    public void add_Sandwich(Sandwich s) {
+    public void addSandWich(Sandwich s) {
         this.sandwiches.add(s);
     }
 }

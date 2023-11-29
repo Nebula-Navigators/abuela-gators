@@ -1,7 +1,7 @@
-package com.pluralsight.OrderTypeListFolder.Sandwich;
+package com.pluralsight.type.sandwich;
 
-import com.pluralsight.OrderTypeListFolder.Sandwich.ListOfToppings.CheeseType;
-import com.pluralsight.OrderTypeListFolder.Sandwich.ListOfToppings.MeatType;
+import com.pluralsight.type.sandwich.toppings.CheeseType;
+import com.pluralsight.type.sandwich.toppings.MeatType;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,5 @@
-package com.pluralsight.OrderTypeListFolder.Sandwich;
-import com.pluralsight.OrderTypeListFolder.Size;
+package com.pluralsight.type.sandwich;
+import com.pluralsight.type.Size;
 
 public class Sandwich {
     private final BreadType bread;

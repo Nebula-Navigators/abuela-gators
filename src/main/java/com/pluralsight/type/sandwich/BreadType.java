@@ -1,4 +1,4 @@
-package com.pluralsight.OrderTypeListFolder.Sandwich;
+package com.pluralsight.type.sandwich;
 
 public enum BreadType {
     WHITE, WHEAT, RYE, WRAP;

@@ -1,4 +1,4 @@
-package com.pluralsight.OrderTypeListFolder;
+package com.pluralsight.type;
 
 public enum Size {
     SMALL(5.50,1.00,0.75,0.50,0.30,2.00),

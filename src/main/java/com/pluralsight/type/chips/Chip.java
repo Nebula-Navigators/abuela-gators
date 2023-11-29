@@ -1,4 +1,4 @@
-package com.pluralsight.OrderTypeListFolder.Chips;
+package com.pluralsight.type.chips;
 
 
 public class Chip {

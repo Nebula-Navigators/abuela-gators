@@ -1,7 +1,7 @@
-package com.pluralsight.OrderTypeListFolder.Drink;
+package com.pluralsight.type.drink;
 
 
-import com.pluralsight.OrderTypeListFolder.Size;
+import com.pluralsight.type.Size;
 
 public class Drink {
     private DrinkType drink;
@@ -17,10 +17,12 @@ public class Drink {
 
     Size sizeForDrink = null;
 
-    public Drink(DrinkType drink, double price, Size size) {
+    public void setDrink(DrinkType drink) {
         this.drink = drink;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
-        this.sizeForDrink = size;
     }
 
     public DrinkType getDrink() {
