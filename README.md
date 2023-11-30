@@ -126,28 +126,28 @@ Below are the classes that we have used in our project.
 ### Screenshot
 
 
-| Home Screen | Order Menu | CheckOut Menu     |  Receipt Menu |
-| ----------- | ---------- | ---- | ------- |
-|       <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/HomeScreen.png" width=300>      | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/OrderMenu.png" width=300>     | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/CheckOutMenu.png" width=300>| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/Receipt.png" width=300>
+| Home Screen                                                                                                  | Order Menu                                                                                                    | CheckOut Menu                                                                                                    |  Receipt Menu |
+|--------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------| ------- |
+| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/HomeScreen.png" width=400> | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/OrderMenu.png" width=400> | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/CheckOutMenu.png" width=400> | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/Receipt.png" width=400>
 
 ###### Sandwich screens:
 
 
-| Bread Menu | Cheese Menu | Meat Menu |
-| -------- | -------- | ----- |
-| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/BreadMenu.png" width=350>     | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/CheeseMenu.png" width=350>     | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/MeatMenu.png" width=350>     | 
+| Bread Menu                                                                                                  | Cheese Menu                                                                                                  | Meat Menu                                                                                                  |
+|-------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/BreadMenu.png" width=400> | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/CheeseMenu.png" width=400> | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/MeatMenu.png" width=400> | 
 
 
 
-| Extra Meat | Extra Cheese | Size Menu |
-| -------- | -------- | -------- |
-| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/ExtraMeatMenu.png" width=350>     | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/ExtraCheese.png" width=350>     | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/SizeMenu.png" width=350>     |
+| Extra Meat                                                                                                      | Extra Cheese                                                                                                  | Size Menu                                                                                                  |
+|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/ExtraMeatMenu.png" width=400> | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/ExtraCheese.png" width=400> | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/SizeMenu.png" width=400> |
 
 
 
-| Regular Topping | Sauces | Sides |
-| -------- | -------- | -------- |
-| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/RegularToppingMenu.png" width=350>     | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/SauceMenu.png" width=350>     | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/SidesMenu.png" width=350>     |
+| Regular Topping                                                                                                      | Sauces                                                                                                      | Sides                                                                                                       |
+|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/RegularToppingMenu.png" width=400> | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/SauceMenu.png" width=400> | <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/SidesMenu.png" width=400> |
 
 
 
