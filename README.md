@@ -24,12 +24,14 @@ Our commitment to quality ingredients and phenomonal service is sure to make you
 ### Project Structure
 Our project is organized into several packages and subclasses, each serving a specific purpose for our deli:
 
-User Interface Class:
+```UserInterface``` Class:
 
-The User Interface Class contains the entry point of the application. This is the starting class that initializes the application and handles user interactions.
+The ```UserInterface``` Class contains the entry point of the application. This is the starting class that initializes the application and handles user interactions.
+
 It works as a blueprint by implementing classes and  methods. The customer would input their order in the intelliJ terminal in order to run our code to order their meal.
 
-Other classes include types os sandwiches, chips, drinks, user receipts, and system data handler.
+Other classes included are ```Sandwiches```, ```Chip```, ```Drink```,  ```Receipt```, ```OrderManager```, ```Topping``` and ```Order```.
+
 We have also created Enum classes which is used to add methods in order to define a set of constant values.
 
 
@@ -40,6 +42,7 @@ We break it down to three parts
 <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/UMLPart1.png">
 <img src="https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/UMLPart2.png">
 
+
 ### Classes and Packages
 
 Below packages are the list of package that we used in our project
@@ -48,11 +51,13 @@ Below packages are the list of package that we used in our project
 
 | Package | Usage |
 | -------- | -------- |
-| Time      | To get the real time to create a file '.txt' so that we can save receipt    |
-|util package | To use ArrayList to save sandwich, drinks and chips |
+| ```time```      | To get the real time to create a file '.txt' so that we can save receipt    |
+|```util``` package | To use ArrayList to save sandwich, drinks and chips |
 |com.pluralsight | The package that holds all the classes and enum mentioned in below |
 
 Below are the classes that we have used in our project.
+
+
 ##### classes
 
 
@@ -71,28 +76,28 @@ Below are the classes that we have used in our project.
 |`Chip` | blueprint for chip i.e. chiptype and price |
 
 
-- AbuelaGators
-- UserInterface
-  - HomeScreen
-  - OrderScreen
-  - DrinkScreen
-  - ChipScreen
-  - SandwichScreen
-  - CheckOutScreen
-- Order
-  - OrderManager
-- Receipt
-  - ReceiptFileManager
-- Sandwich
-  - Topping
-- Drink
-- Chip
+- ```AbuelaGators```
+- ```UserInterface```
+  - ```HomeScreen```
+  - ```OrderScreen```
+  - ```DrinkScreen```
+  - ```ChipScreen```
+  - ```SandwichScreen```
+  - ```CheckOutScreen```
+- ```Order```
+  - ```OrderManager```
+- ```Receipt```
+  - ```ReceiptFileManager```
+- ```Sandwich```
+  - ```Topping```
+- ```Drink```
+- ```Chip```
 
 ##### Enum
-- Size
-- BreadType
-- DrinkType
-- ChipType
+- ```Size```
+- ```BreadType```
+- ```DrinkType```
+- ```ChipType```
 
 ### Relationships
 - **AbuelaGators - UserInterface**
@@ -150,7 +155,10 @@ Below are the classes that we have used in our project.
 | --------- | ---- | 
 | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/DrinkMenu.png" width=400>    | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/ChipsMenu.png" width=400> | 
 
-
+### Installation
+- git clone [Click me to copy link to clone](https://github.com/Nebula-Navigators/abuela-gators.git)
+- Open the project in intelliJ IDE platform
+- Navigate to AbuelaGators class and run the program
 
 
 
@@ -160,6 +168,7 @@ Below are the classes that we have used in our project.
 - **Hackmd.io** To collaborate while writing README.md file
 - **Github** for collaboration
 - **Slack** for communication
+
 ### Credit
 - **StackOverFlow** for Loading Bar https://stackoverflow.com/questions/852665/command-line-progress-bar-in-java
 
