@@ -15,17 +15,15 @@ public class ChipScreen {
         boolean running = true;
         while(running) {
             System.out.println("""
-                        You are in Chips Menu Screen:
-                        Please follow the following instructions:
-                        -------------------------------------------------
-                        |    1. Lays         |  2. Doritos              |
-                        -------------------------------------------------
-                        |    3. Cheetos      |  4. Pringles             |
-                        -------------------------------------------------
-                        |   5. Takis         |  6. Fritos               |
-                        -------------------------------------------------
-                        |                0. Go back                     |
-                        -------------------------------------------------
+                                              You are in Chips Menu Screen:
+                                              Please follow the following instructions:
+                                             -------------------------------------------------
+                                             |    1. Lays         |  2. Doritos              |
+                                             |    3. Cheetos      |  4. Pringles             |
+                                             |    5. Takis        |  6. Fritos               |
+                                             -------------------------------------------------
+                                             |                0. Go back                     |
+                                             -------------------------------------------------
                             """);
             int chipsOption = scanner.nextInt();
 

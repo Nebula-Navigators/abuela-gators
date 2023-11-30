@@ -13,15 +13,14 @@ public class OrderScreen {
         while(running) {
 
             System.out.println("""
-                                Order Screen
-                  Follow the following instructions:
-                  -----------------------------------------------
-                  | 1. Add Sandwich    |   2. Add Drinks        |
-                  -----------------------------------------------
-                  | 3. Add Chips       |   4. Checkout          |
-                  -----------------------------------------------
-                  |            0. Cancel Order                  |
-                  -----------------------------------------------
+                                                      Order Screen
+                                        Follow the following instructions:
+                                        -----------------------------------------------
+                                        | 1. Add Sandwich    |   2. Add Drinks        |
+                                        | 3. Add Chips       |   4. Checkout          |
+                                        -----------------------------------------------
+                                        |            0. Cancel Order                  |
+                                        -----------------------------------------------
                    """);
             System.out.print("Please choose an option: ");
 

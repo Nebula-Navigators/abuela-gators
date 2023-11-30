@@ -16,16 +16,14 @@ public class DrinkScreen {
         boolean running = true;
         while (running) {
             System.out.println("""
-                 You are in Drink Menu Screen:
-                 Please follow the following instructions:
-                    Choose Drink
-                    ----------------------------------------------------
-                    | 1. Lemonade       |     2. Smoothie              |
-                    ----------------------------------------------------
-                    | 3. Coffee         |     4. Water                 |
-                    ----------------------------------------------------
-                    | 5. Soda           |     0. Go back               |
-                    ----------------------------------------------------
+                                       You are in Drink Menu Screen:
+                                       Please follow the following instructions:
+                                          Choose Drink
+                                          ----------------------------------------------------
+                                          | 1. Lemonade       |     2. Smoothie              |
+                                          | 3. Coffee         |     4. Water                 |
+                                          | 5. Soda           |     0. Go back               |
+                                          ----------------------------------------------------
                 """);
             int drinkChoice = scanner.nextInt();
 
@@ -84,18 +82,16 @@ public class DrinkScreen {
         boolean valid = true; // Set to true to enter the loop initially
         while (valid) {
             System.out.println("""
-                Select the size for drink:
-                -----------------------------------------
-                |  Size                |     Price      |
-                -----------------------------------------
-                | 1. Small             |     $2.00      |
-                -----------------------------------------
-                | 2. Medium            |     $2.50      |
-                -----------------------------------------
-                | 3. Large             |     $3.00      |
-                -----------------------------------------
-                |             0. Go back                |
-                -----------------------------------------
+                                      Select the size for drink:
+                                      -----------------------------------------
+                                      |  Size                |     Price      |
+                                      -----------------------------------------
+                                      | 1. Small             |     $2.00      |
+                                      | 2. Medium            |     $2.50      |
+                                      | 3. Large             |     $3.00      |
+                                      -----------------------------------------
+                                      |             0. Go back                |
+                                      -----------------------------------------
                 """);
             int ans = scanner.nextInt();
             switch (ans) {

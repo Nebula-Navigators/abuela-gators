@@ -66,7 +66,7 @@ public class ReceiptFileManager {
 
         for (Drink drink : receipt.getOrders().getDrinks()) {
             details.append(String.format("""
-                    %-10s -%-10s                                         %.2f
+                    %-10s -%-10s                                      %.2f
                     
                     """,
                     drink.getDrink(),
@@ -83,7 +83,7 @@ public class ReceiptFileManager {
 
         for (Chip chip : receipt.getOrders().getChips()) {
             details.append(String.format("""
-                    %-20s                                                %.2f
+                    %-20s                                             %.2f
                     
                     """,
                     chip.getChipName(),
@@ -94,7 +94,7 @@ public class ReceiptFileManager {
                 -----------------------------------------------------------------
                 
                 Your Total Amount                                        %.2f
-                Tax Amount - (After Applying 15%s on total)              %02.2f
+                Tax Amount - (After Applying 15%s on total)               %02.2f
                 
                 ----------------------------------------------------------------
                 Amount after tax                                         %.2f
