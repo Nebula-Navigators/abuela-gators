@@ -66,10 +66,10 @@ public class SandwichScreen {
         while (valid) {
             System.out.println("""
                     Select bread:
-                    1. Wheat
-                    2. White
-                    3. Rye
-                    4. Wrap
+       -----------------------------------------------
+       |    1. Wheat      |        2. White          |
+       |    3. Rye        |        4. Wrap           |
+       -----------------------------------------------
                     """);
             int answer = scanner.nextInt();
             switch (answer) {
@@ -100,14 +100,17 @@ public class SandwichScreen {
         boolean running = true;
         while (running) {
             System.out.println("""
+            
             You are in Sandwich Menu:
-            Size                   4''     8''    12''
-            Price for bread        5.50    7      8.50
-                                
-            Select size:
-            1. Small - 4''
-            2. Medium - 8''
-            3. Large - 12''
+         -----------------------------------------------
+         |   Size                  4''     8''    12'' |
+         |  Price for bread        5.50    7      8.50 |
+         |                                             |
+         |  Select size:                               |
+         |   1. Small - 4''                            |
+         |   2. Medium - 8''                           |
+         |   3. Large - 12''                           |
+         -----------------------------------------------
             """);
 
             int choose = scanner.nextInt();
@@ -139,13 +142,13 @@ public class SandwichScreen {
         while(valid) {
             System.out.println("""
                     Please follow the following instructions for Meat:
-                    1. Steak
-                    2. Ham
-                    3. Salami
-                    4. Roast beef
-                    5. Chicken
-                    6. Bacon
-                    0. Don't want it
+                    -----------------------------------------------
+                    |    1. Steak        |        2. Ham          |
+                    |    3. Salami       |        4. Roast beef   |
+                    |    5. Chicken      |        6. Bacon        |
+                    -----------------------------------------------
+                    |            0. Don't want it                 |
+                    -----------------------------------------------
                     """);
             int choice = scanner.nextInt();
             switch (choice)
@@ -192,11 +195,12 @@ public class SandwichScreen {
             System.out.println("""
                     If you want to add cheese.
                     Please select the Cheese.
-                    1. American
-                    2. Provolone
-                    3. Cheddar
-                    4. Swiss;
-                    0. Don't want it.
+                    ---------------------------------------
+                    |    1. American  |    2. Provolone   |
+                    |    3. Cheddar   |    4. Swiss;      |
+                    ---------------------------------------
+                    |           0. Don't want it.         |
+                    ---------------------------------------
                     """);
             int option = scanner.nextInt();
             switch (option)
@@ -231,17 +235,13 @@ public class SandwichScreen {
         {
             System.out.println("""
                     These toppings are regular topping select which one you want to include:
-                    
-                    1. Lettuce
-                    2. Peppers
-                    3. Onions
-                    4. Tomatoes
-                    5. Jalepenos
-                    6. cucumbers
-                    7. pickles
-                    8. guacamole
-                    9. mushrooms
-                    0. Don't want to add anymore
+                    ------------------------------------------------------------------------
+                    |         1. Lettuce           |         2. Peppers                    |
+                    |         3. Onions            |         4. Tomatoes                   |
+                    |         5. Jalepenos         |         6. cucumbers                  |
+                    |         7. pickles           |         8. guacamole                  |
+                    |         9. mushrooms         |         0. Don't want to add anymore  |
+                    ------------------------------------------------------------------------
                     """);
             int option = scanner.nextInt();
             switch (option)
@@ -267,12 +267,13 @@ public class SandwichScreen {
         {
             System.out.println("""
                     Do you want sauces if yes select but cannot be more than 2:
-                    1. Mayo
-                    2. Mustard
-                    3. Ketchup
-                    4. Ranch
-                    5. thousand islands
-                    6. vinaigrette
+                    ----------------------------------------------------------
+                    |       1. Mayo              |        2. Mustard         |
+                    |       3. Ketchup           |        4. Ranch           |
+                    |       5. thousand islands  |        6. vinaigrette     |
+                    ----------------------------------------------------------
+                    |                0. Don't want to add anymore            |
+                    ----------------------------------------------------------
                     """);
             int option = scanner.nextInt();
             switch (option)
@@ -318,9 +319,11 @@ public class SandwichScreen {
         {
             System.out.println("""
                     Following sides are available select one if you want to add;
-                    1. au jus
-                    2. sauce
-                    0. Do not want to include anymore
+                    ------------------------------------------------------------
+                    |        1. au jus         |             2. sauce          |
+                    ------------------------------------------------------------
+                    |                0. Do not want to include anymore         |
+                    ------------------------------------------------------------
                     """);
             int choice = scanner.nextInt();
             switch (choice)
@@ -348,11 +351,13 @@ public class SandwichScreen {
         while(valid)
         {
             System.out.println("""
-                    Do you want extra cheese? (Y/N)
+                    Do you want extra cheese? 
                     Extra Cheese will add extra charge based on following:
-                    Small - 0.30
-                    Medium - 0.60
-                    Large - 0.90
+                    --------------------------------------------------------------
+                    |    Small - 0.30  |    Medium - 0.60    |    Large - 0.90   |
+                    --------------------------------------------------------------
+                    |                         Enter (Y/N)                        |
+                    --------------------------------------------------------------
                     """);
             char choice = scanner.next().charAt(0);
 
@@ -378,11 +383,13 @@ public class SandwichScreen {
         while(valid)
         {
             System.out.println("""
-                    Do you want to add extra meat? (Y/N)
+                    Do you want to add extra meat? 
                     Extra meat will add extra charge based on following:
-                    Small - 0.50
-                    Medium - 1.00
-                    Large - 1.50
+                    ----------------------------------------------------------
+                    |   Small - 0.50  |   Medium - 1.00   |  Large - 1.50    |
+                    ----------------------------------------------------------
+                    |                    Enter (Y/N)                         |
+                    ----------------------------------------------------------
                     """);
             char choice = scanner.next().charAt(0);
 
