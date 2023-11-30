@@ -70,7 +70,7 @@ public class ReceiptFileManager {
                     
                     """,
                     drink.getDrink(),
-                    drink.getSizeForDrink(),
+                    drink.getSize(),
                     drink.getPrice()));
         }
 

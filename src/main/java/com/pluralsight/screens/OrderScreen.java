@@ -7,18 +7,21 @@ import java.util.Scanner;
 public class OrderScreen {
     Scanner scanner = new Scanner(System.in);
     public void display(OrderManager handler) {
+        HomeScreen h = new HomeScreen();
 
         boolean running = true;
         while(running) {
 
             System.out.println("""
-                            Order Screen
+                                Order Screen
                   Follow the following instructions:
-                  1. Add Sandwich
-                  2. Add Drinks
-                  3. Add Chips
-                  4. Checkout
-                  0. Cancel Order
+                  -----------------------------------------------
+                  | 1. Add Sandwich    |   2. Add Drinks        |
+                  -----------------------------------------------
+                  | 3. Add Chips       |   4. Checkout          |
+                  -----------------------------------------------
+                  |            0. Cancel Order                  |
+                  -----------------------------------------------
                    """);
             System.out.print("Please choose an option: ");
 
@@ -27,20 +30,29 @@ public class OrderScreen {
             switch (choice) {
                 case 1 -> {
                     SandwichScreen menuForSandwich = new SandwichScreen();
+                    h.loading();
                     menuForSandwich.displayScreen(handler);
                 }
                 case 2 -> {
                     DrinkScreen drinkMenu = new DrinkScreen();
+                    h.loading();
                     drinkMenu.display(handler);
                 }
                 case 3 -> {
                     ChipScreen chipMenu = new ChipScreen();
+                    h.loading();
                     chipMenu.display(handler);
 
                 }
                 case 4 -> {
                     CheckoutScreen checkoutOption = new CheckoutScreen();
+                    h.loading();
                     checkoutOption.display(handler);
+                    if(checkoutOption.checked)
+                    {
+
+                        return;
+                    }
 
                 }
                 case 0 -> {

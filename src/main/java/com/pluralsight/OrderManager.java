@@ -64,11 +64,11 @@ public class OrderManager {
 
     }
 
-    public void putDrinkOrderInComputer(DrinkType selectedDrink, double price, Size selectedDrinkSize) {
+    public void putDrinkOrderInComputer(DrinkType selectedDrink, Size selectedDrinkSize) {
         Drink drink = new Drink();
         drink.setDrink(selectedDrink);
-        drink.setPrice(price);
-        drink.setSizeForDrink(selectedDrinkSize);
+        drink.setOwnPrice(selectedDrinkSize);
+        drink.setSize(selectedDrinkSize);
         this.orders.addDrink(drink);
     }
 
@@ -166,7 +166,7 @@ public class OrderManager {
                     %s - %s                                         %.2f
                     """,
                     drink.getDrink(),
-                    drink.getSizeForDrink(),
+                    drink.getSize(),
                     drink.getPrice()
             );
         }

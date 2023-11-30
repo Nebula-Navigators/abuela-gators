@@ -2,19 +2,19 @@
                             Abuela-Gators
                             23-34 NewYork, NY
 -------------------------------------------------------------
-Customer name: Hally
+Customer name: Shankar Magar
 
                              Receipt
 
                         Drinks
-Lemonade             - -15MEDIUM                                         2.50
+Lemonade             -MEDIUM                                             2.50
 
-Coffee               - -15MEDIUM                                         2.50
+Smoothie             -SMALL                                              2.00
 
 -----------------------------------------------------------------
 
-Your Total Amount                                        5.00
-Tax Amount - (After Applying 15% on total)              25.00
+Your Total Amount                                        4.50
+Tax Amount - (After Applying 15% on total)              20.25
 
 ----------------------------------------------------------------
-Amount after tax                                         30.00
+Amount after tax                                         24.75

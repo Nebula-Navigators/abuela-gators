@@ -6,6 +6,7 @@ import com.pluralsight.receipts.Receipt;
 import java.util.Scanner;
 
 public class CheckoutScreen {
+    boolean checked = false;
     Scanner scanner = new Scanner(System.in);
     public void display(OrderManager handler)
     {
@@ -33,6 +34,7 @@ public class CheckoutScreen {
                         Receipt bill = handler.getReceipt(name);
                         displayReceiptScreen(bill);
                         running = false;
+                        checked = true;
                         return;
                     }
                     case 0 -> running = false;
