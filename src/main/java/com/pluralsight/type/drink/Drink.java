@@ -7,15 +7,17 @@ public class Drink {
     private DrinkType drink;
     private double price;
 
-    public Size getSizeForDrink() {
-        return sizeForDrink;
+    double [] listPrices = {2.00,2.50,3.00};
+
+    public Size getSize() {
+        return size;
     }
 
-    public void setSizeForDrink(Size sizeForDrink) {
-        this.sizeForDrink = sizeForDrink;
+    public void setSize(Size size) {
+        this.size = size;
     }
 
-    Size sizeForDrink = null;
+    Size size = null;
 
     public void setDrink(DrinkType drink) {
         this.drink = drink;
@@ -23,6 +25,22 @@ public class Drink {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public void setOwnPrice(Size size)
+    {
+    if(size == Size.SMALL)
+    {
+        this.price = listPrices[0];
+    }
+    else if (size == Size.MEDIUM)
+    {
+        this.price = listPrices[1];
+    }
+    else
+    {
+        this.price = listPrices[2];
+    }
     }
 
     public DrinkType getDrink() {
