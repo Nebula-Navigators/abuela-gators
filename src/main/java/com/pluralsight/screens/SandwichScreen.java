@@ -273,6 +273,7 @@ public class SandwichScreen {
                     4. Ranch
                     5. thousand islands
                     6. vinaigrette
+                    0. Don't want to add
                     """);
             int option = scanner.nextInt();
             switch (option)
