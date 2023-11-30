@@ -6,6 +6,7 @@ import com.pluralsight.type.Size;
 public class Drink {
     private DrinkType drink;
     private double price;
+    private int quantity=1;
 
     double [] listPrices = {2.00,2.50,3.00};
 
@@ -27,19 +28,27 @@ public class Drink {
         this.price = price;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public void setOwnPrice(Size size)
     {
     if(size == Size.SMALL)
     {
-        this.price = listPrices[0];
+        this.price = listPrices[0] * this.quantity;
     }
     else if (size == Size.MEDIUM)
     {
-        this.price = listPrices[1];
+        this.price = listPrices[1] * this.quantity;
     }
     else
     {
-        this.price = listPrices[2];
+        this.price = listPrices[2] * this.quantity;
     }
     }
 

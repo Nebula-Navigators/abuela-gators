@@ -21,14 +21,16 @@ public class CheckoutScreen {
             boolean running = true;
             while (running) {
                 System.out.println("""
-                        Please follow the following instructions:
-                        ---------------------------------------
-                        |    1. Checkout  |    0. Cancel      |
-                        -----------------------------------------
+                        
+                                             Please follow the following instructions:
+                                             ---------------------------------------
+                                             |    1. Checkout  |    0. Cancel      |
+                                             ---------------------------------------
                             """);
                 int checkoutOption = scanner.nextInt();
                 switch (checkoutOption) {
                     case 1 -> {
+                        System.out.println("");
                         System.out.println("Please enter your name.");
                         scanner.nextLine();
                         String name = scanner.nextLine();

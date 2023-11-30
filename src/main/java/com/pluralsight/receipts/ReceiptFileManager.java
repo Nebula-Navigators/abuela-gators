@@ -35,7 +35,7 @@ public class ReceiptFileManager {
             String extraMeat = sandwich.getToppings().isExtraMeats() ? "Extra Meat": "";
 
             details.append(String.format("""
-                    Selected Bread: %-15s -%15s                                  %.2f
+                    Selected Bread: %s -%-15s                                  %.2f
                     Qty %d
                     
                     Topping:
@@ -67,11 +67,13 @@ public class ReceiptFileManager {
         for (Drink drink : receipt.getOrders().getDrinks()) {
             details.append(String.format("""
                     %-10s -%-10s                                      %.2f
+                    Qty: %d
                     
                     """,
                     drink.getDrink(),
                     drink.getSize(),
-                    drink.getPrice()));
+                    drink.getPrice(),
+                    drink.getQuantity()));
         }
 
         if(!receipt.getOrders().getChips().isEmpty())

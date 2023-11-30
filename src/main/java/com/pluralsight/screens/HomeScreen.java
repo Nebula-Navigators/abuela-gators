@@ -65,7 +65,7 @@ public class HomeScreen {
 
         for (int i = 0; i < 20; i++) {
             System.out.print("\r" + spinner[i % spinner.length] + " Loading...");
-            Thread.sleep(200); // Adjust the sleep duration for the desired speed
+            Thread.sleep(150); // Adjust the sleep duration for the desired speed
         }
 
         System.out.println("\nLoading complete!");

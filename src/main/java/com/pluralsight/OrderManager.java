@@ -64,8 +64,9 @@ public class OrderManager {
 
     }
 
-    public void putDrinkOrderInComputer(DrinkType selectedDrink, Size selectedDrinkSize) {
+    public void putDrinkOrderInComputer(DrinkType selectedDrink, Size selectedDrinkSize, int quantity) {
         Drink drink = new Drink();
+        drink.setQuantity(quantity);
         drink.setDrink(selectedDrink);
         drink.setOwnPrice(selectedDrinkSize);
         drink.setSize(selectedDrinkSize);
@@ -97,7 +98,7 @@ public class OrderManager {
                 -----------------------------------------------------------------
                 
                 Your Total Amount                                        %.2f
-                Tax Amount - (After Applying 15%s on total)              %02.2f
+                Tax Amount - (After Applying 15%s on total)               %02.2f
                 
                 ----------------------------------------------------------------
                 Amount after tax                                         %.2f
@@ -107,22 +108,29 @@ public class OrderManager {
 
     public void displaySandwich()
     {
+        if(!this.order.getSandwiches().isEmpty())
+        {
+            System.out.printf("""
+                                              Sandwich
+                    """);
+        }
         for(Sandwich sandwich : this.order.getSandwiches())
         {
             String displayExtra = sandwich.getToppings().isExtraCheese() ? "Extra Meat" : "";
             String displayExtraCheese = sandwich.getToppings().isExtraCheese() ? "Extra Cheese": "";
             System.out.printf("""
-            (%s - %s)                                         $%.2f
+            (Bread: %s - %s)                                         $%.2f
+            Qty: %d
             Toppings:
-            %s                                 %s 
-            %s                                 %s
+            %-20s                                 %s
+            %-20s                                 %s
             
             Regular Topping:
-          
             """,
                     sandwich.getBread(),
                     sandwich.getSize(),
                     sandwich.getPrice(),
+                    sandwich.getQuantity(),
                     sandwich.getToppings().getMeats(),
                     displayExtra,
                     sandwich.getToppings().getCheese(),
@@ -135,7 +143,6 @@ public class OrderManager {
             System.out.println("""
                     
                     Sauces:
-                 
                     """);
             for (String s: sandwich.getToppings().getSauces())
             {
@@ -143,8 +150,8 @@ public class OrderManager {
             }
 
             System.out.println("""
+                    
                     Sides:
-                 
                     """);
             for(String s: sandwich.getToppings().getSides()) {
                 System.out.println(s);
@@ -156,18 +163,20 @@ public class OrderManager {
     {
         if(!this.order.getDrinks().isEmpty()) {
             System.out.println("""      
-                                                       Drinks
+                                              Drinks
                     
                     """);
         }
         for(Drink drink: this.order.getDrinks())
         {
             System.out.printf( """     
-                    %s - %s                                         %.2f
+                    %-10s - %-10s                                    %.2f
+                    Qty: %d
                     """,
                     drink.getDrink(),
                     drink.getSize(),
-                    drink.getPrice()
+                    drink.getPrice(),
+                    drink.getQuantity()
             );
         }
     }
@@ -176,14 +185,13 @@ public class OrderManager {
     {
         if(!this.order.getChips().isEmpty()) {
             System.out.println("""      
-                    Chips
-                    -----------------------------------------------------
+                                             Chips
                     """);
         }
         for(Chip chip: this.order.getChips())
         {
             System.out.printf("""
-                    %s                                                %.2f
+                    %-20s                                             %.2f
                     """,
                     chip.getChipName(),
                     chip.getPrice()
@@ -240,7 +248,7 @@ public class OrderManager {
 
     public double calculateTotalPriceAfterTax()
     {
-        double res = 0.00;
+        double res;
         res = this.order.getTotal() + (this.order.getTotal()*this.order.getTax());
         return res;
     }

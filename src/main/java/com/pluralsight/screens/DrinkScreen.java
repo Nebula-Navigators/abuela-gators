@@ -31,21 +31,24 @@ public class DrinkScreen {
                 case 1 -> {
                     selectedDrink = DrinkType.Lemonade;
                     selectedDrinkSize = askForDrinkSize();
-                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize);
+                    int quantity = askForQuantity();
+                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize, quantity);
                     h.loading();
                     System.out.println("your drink has been added!!!");
                 }
                 case 2 -> {
                     selectedDrink = DrinkType.Smoothie;
                     selectedDrinkSize = askForDrinkSize();
-                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize);
+                    int quantity = askForQuantity();
+                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize, quantity);
                     h.loading();
                     System.out.println("your drink has been added!!!");
                 }
                 case 3 -> {
                     selectedDrink = DrinkType.Coffee;
                     selectedDrinkSize = askForDrinkSize();
-                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize);
+                    int quantity = askForQuantity();
+                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize, quantity);
                     h.loading();
                     System.out.println("your drink has been added!!!");
 
@@ -53,14 +56,16 @@ public class DrinkScreen {
                 case 4 -> {
                     selectedDrink = DrinkType.Water;
                     selectedDrinkSize = askForDrinkSize();
-                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize);
+                    int quantity = askForQuantity();
+                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize, quantity);
                     h.loading();
                     System.out.println("your drink has been added!!!");
                 }
                 case 5 -> {
                     selectedDrink = DrinkType.Soda;
                     selectedDrinkSize = askForDrinkSize();
-                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize);
+                    int quantity = askForQuantity();
+                    handler.putDrinkOrderInComputer(selectedDrink, selectedDrinkSize, quantity);
                     h.loading();
                     System.out.println("your drink has been added!!!");
                 }
@@ -106,6 +111,30 @@ public class DrinkScreen {
         }
 
         return null;
+    }
+    public int askForQuantity() {
+        int quantity = 0;
+
+        while (true) {
+            System.out.println("Quantity of particular sandwich: ");
+
+            // Check if the next input is an integer
+            if (scanner.hasNextInt()) {
+                quantity = scanner.nextInt();
+
+                // Check if the quantity is greater than 0
+                if (quantity > 0) {
+                    break; // Exit the loop if the input is valid
+                } else {
+                    System.out.println("Quantity must be greater than 0. Please try again.");
+                }
+            } else {
+                System.out.println("Invalid input. Please enter a valid integer.");
+                scanner.next(); // Consume the invalid input to avoid an infinite loop
+            }
+        }
+
+        return quantity;
     }
 
 }
