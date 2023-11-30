@@ -1,5 +1,6 @@
 package com.pluralsight.screens;
 
+import com.pluralsight.ANSIColors;
 import com.pluralsight.OrderManager;
 
 import java.util.Scanner;
@@ -12,7 +13,7 @@ public class OrderScreen {
         boolean running = true;
         while(running) {
 
-            System.out.println("""
+            System.out.println(ANSIColors.green + ANSIColors.bold +"""
                                                       Order Screen
                                         Follow the following instructions:
                                         -----------------------------------------------
@@ -21,7 +22,7 @@ public class OrderScreen {
                                         -----------------------------------------------
                                         |            0. Cancel Order                  |
                                         -----------------------------------------------
-                   """);
+                   """ + ANSIColors.resetBold);
             System.out.print("Please choose an option: ");
 
             int choice = scanner.nextInt();

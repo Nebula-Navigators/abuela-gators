@@ -1,5 +1,6 @@
 package com.pluralsight.screens;
 
+import com.pluralsight.ANSIColors;
 import com.pluralsight.OrderManager;
 import com.pluralsight.type.Size;
 import com.pluralsight.type.drink.DrinkType;
@@ -15,7 +16,7 @@ public class DrinkScreen {
         double price = 0.00;
         boolean running = true;
         while (running) {
-            System.out.println("""
+            System.out.println(ANSIColors.green + ANSIColors.bold + """
                                        You are in Drink Menu Screen:
                                        Please follow the following instructions:
                                           Choose Drink
@@ -97,7 +98,7 @@ public class DrinkScreen {
                                       -----------------------------------------
                                       |             0. Go back                |
                                       -----------------------------------------
-                """);
+                """ + ANSIColors.resetBold);
             int ans = scanner.nextInt();
             switch (ans) {
                 case 1 -> {return Size.SMALL;}

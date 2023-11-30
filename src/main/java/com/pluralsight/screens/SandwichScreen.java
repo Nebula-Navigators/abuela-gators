@@ -1,5 +1,6 @@
 package com.pluralsight.screens;
 
+import com.pluralsight.ANSIColors;
 import com.pluralsight.OrderManager;
 import com.pluralsight.type.Size;
 import com.pluralsight.type.sandwich.BreadType;
@@ -63,7 +64,7 @@ public class SandwichScreen {
     private BreadType askForSelectingBread() {
         boolean valid = true;
         while (valid) {
-            System.out.println("""
+            System.out.println(ANSIColors.blue + ANSIColors.bold + """
                                           Select bread:
                              -----------------------------------------------
                              |    1. Wheat      |        2. White          |
@@ -98,7 +99,7 @@ public class SandwichScreen {
     private Size askForSize() {
         boolean running = true;
         while (running) {
-            System.out.println("""
+            System.out.println( ANSIColors.blue + ANSIColors.bold + """
             
                                   You are in Sandwich Menu:
                                -----------------------------------------------
@@ -110,7 +111,7 @@ public class SandwichScreen {
                                |   2. Medium - 8''                           |
                                |   3. Large - 12''                           |
                                -----------------------------------------------
-            """);
+            """ );
 
             int choose = scanner.nextInt();
 
@@ -326,7 +327,7 @@ public class SandwichScreen {
                                           ------------------------------------------------------------
                                           |                0. Do not want to include anymore         |
                                           ------------------------------------------------------------
-                    """);
+                    """ + ANSIColors.resetBold);
             int choice = scanner.nextInt();
             switch (choice)
             {

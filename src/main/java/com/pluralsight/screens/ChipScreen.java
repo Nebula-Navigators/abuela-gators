@@ -1,5 +1,6 @@
 package com.pluralsight.screens;
 
+import com.pluralsight.ANSIColors;
 import com.pluralsight.OrderManager;
 import com.pluralsight.type.chips.ChipType;
 
@@ -14,7 +15,7 @@ public class ChipScreen {
 
         boolean running = true;
         while(running) {
-            System.out.println("""
+            System.out.println(ANSIColors.bold + ANSIColors.red + ANSIColors.blue + """
                                               You are in Chips Menu Screen:
                                               Please follow the following instructions:
                                              -------------------------------------------------

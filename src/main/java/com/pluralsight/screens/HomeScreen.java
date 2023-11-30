@@ -1,9 +1,12 @@
 package com.pluralsight.screens;
 
 
+import com.pluralsight.ANSIColors;
 import com.pluralsight.OrderManager;
 
 import java.util.Scanner;
+
+import static com.pluralsight.ANSIColors.bold;
 
 public class HomeScreen {
     OrderManager handler = new OrderManager();
@@ -12,7 +15,7 @@ public class HomeScreen {
 
         // Greet the customer and give customer option to select from make an order or exit
         // Contributed by Hally
-        System.out.println("""
+        System.out.println(ANSIColors.blue + ANSIColors.bold +"""
                                           --------------------------------------------------------------------------------------------------------------
                                           |                                       Welcome to Abuela - Gators:                                          |
                                           |                                                                                                            |
@@ -21,16 +24,16 @@ public class HomeScreen {
                                           |   Bite into happiness today!                                                                               |
                                           |                                                                                                            |
                                           --------------------------------------------------------------------------------------------------------------
-                    """);
+                    """+ ANSIColors.resetBold);
         boolean running = true;
         while(running)
         {
-            System.out.println("""
+            System.out.println( ANSIColors.green + bold + """
                               Follow the following instructions:
                               ------------------------------------------------
                               | 1. Make Order        |  0. Exit              |
                               ------------------------------------------------
-        """);
+        """+ ANSIColors.resetBold);
             int answer = scanner.nextInt();
             switch (answer)
             {
