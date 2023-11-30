@@ -22,8 +22,9 @@ public class CheckoutScreen {
             while (running) {
                 System.out.println("""
                         Please follow the following instructions:
-                            1. Checkout
-                            0. Cancel
+                        ---------------------------------------
+                        |    1. Checkout  |    0. Cancel      |
+                        -----------------------------------------
                             """);
                 int checkoutOption = scanner.nextInt();
                 switch (checkoutOption) {

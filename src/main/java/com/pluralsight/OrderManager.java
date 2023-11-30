@@ -20,13 +20,13 @@ import java.time.format.DateTimeFormatter;
 public class OrderManager {
 
 
-    Order orders = new Order();
+    Order order = new Order();
     private static final String ANSI_RESET = "\u001B[0m";
     private static final String ANSI_CYAN = "\u001B[36m";
     private static final String ANSI_YELLOW = "\u001B[33m";
 
     public boolean checkCart() {
-        return orders != null && orders.isNotEmpty();
+        return order != null && order.isNotEmpty();
     }
 
     public void putSandwichOrderInComputer(BreadType bread, Size size, int quantity, Topping topping, boolean isToasted)
@@ -52,7 +52,7 @@ public class OrderManager {
         }
         sandwich.setPrice(calculatedPrice);
 
-        this.orders.addSandWich(sandwich);
+        this.order.addSandWich(sandwich);
 
 
     }
@@ -60,7 +60,7 @@ public class OrderManager {
     public void putChipsOrderInComputer(ChipType selectedChip) {
         Chip chip = new Chip();
         chip.setChipName(selectedChip);
-        this.orders.addChips(chip);
+        this.order.addChips(chip);
 
     }
 
@@ -69,7 +69,7 @@ public class OrderManager {
         drink.setDrink(selectedDrink);
         drink.setOwnPrice(selectedDrinkSize);
         drink.setSize(selectedDrinkSize);
-        this.orders.addDrink(drink);
+        this.order.addDrink(drink);
     }
 
     public void displayOrders() {
@@ -97,17 +97,17 @@ public class OrderManager {
                 -----------------------------------------------------------------
                 
                 Your Total Amount                                        %.2f
-                Tax Amount - (After Applying 15%s on total)              %.2f
+                Tax Amount - (After Applying 15%s on total)              %02.2f
                 
                 ----------------------------------------------------------------
                 Amount after tax                                         %.2f
-                """, this.orders.getTotal(), "%", this.orders.getTax()*this.orders.getTotal(), calculateTotalPriceAfterTax());
+                """, this.order.getTotal(), "%", this.order.getTax()*this.order.getTotal(), calculateTotalPriceAfterTax());
 
     }
 
     public void displaySandwich()
     {
-        for(Sandwich sandwich : this.orders.getSandwiches())
+        for(Sandwich sandwich : this.order.getSandwiches())
         {
             String displayExtra = sandwich.getToppings().isExtraCheese() ? "Extra Meat" : "";
             String displayExtraCheese = sandwich.getToppings().isExtraCheese() ? "Extra Cheese": "";
@@ -154,13 +154,13 @@ public class OrderManager {
 
     public void displayDrink()
     {
-        if(!this.orders.getDrinks().isEmpty()) {
+        if(!this.order.getDrinks().isEmpty()) {
             System.out.println("""      
                                                        Drinks
                     
                     """);
         }
-        for(Drink drink: this.orders.getDrinks())
+        for(Drink drink: this.order.getDrinks())
         {
             System.out.printf( """     
                     %s - %s                                         %.2f
@@ -174,13 +174,13 @@ public class OrderManager {
 
     public void displayChips()
     {
-        if(!this.orders.getChips().isEmpty()) {
+        if(!this.order.getChips().isEmpty()) {
             System.out.println("""      
                     Chips
                     -----------------------------------------------------
                     """);
         }
-        for(Chip chip: this.orders.getChips())
+        for(Chip chip: this.order.getChips())
         {
             System.out.printf("""
                     %s                                                %.2f
@@ -190,7 +190,7 @@ public class OrderManager {
             );
         }
         double totalPrice = getSandwichTotalPrice()+getAllChipsTotalPrice()+getAllDrinkTotalPrice();
-        this.orders.setTotal(totalPrice);
+        this.order.setTotal(totalPrice);
 
     }
 
@@ -201,7 +201,7 @@ public class OrderManager {
         LocalDateTime date = LocalDateTime.now();
         DateTimeFormatter yearTime = DateTimeFormatter.ofPattern("yyyyMMdd-hhmmss");
         String fileName = date.format(yearTime);
-        receipt.setOrders(this.orders);
+        receipt.setOrders(this.order);
 
         ReceiptFileManager manager = new ReceiptFileManager();
         manager.addReceiptInfile(receipt, fileName);
@@ -211,7 +211,7 @@ public class OrderManager {
     public double getSandwichTotalPrice()
     {
         double res = 0.00;
-        for(Sandwich s: this.orders.getSandwiches())
+        for(Sandwich s: this.order.getSandwiches())
         {
            res += s.getPrice();
         }
@@ -221,7 +221,7 @@ public class OrderManager {
     public double getAllDrinkTotalPrice()
     {
         double res = 0.00;
-        for(Drink d: this.orders.getDrinks())
+        for(Drink d: this.order.getDrinks())
         {
             res += d.getPrice();
         }
@@ -231,7 +231,7 @@ public class OrderManager {
     public double getAllChipsTotalPrice()
     {
         double res = 0.00;
-        for(Chip c: this.orders.getChips())
+        for(Chip c: this.order.getChips())
         {
             res+= c.getPrice();
         }
@@ -241,13 +241,13 @@ public class OrderManager {
     public double calculateTotalPriceAfterTax()
     {
         double res = 0.00;
-        res = this.orders.getTotal() + (this.orders.getTotal()*this.orders.getTax());
+        res = this.order.getTotal() + (this.order.getTotal()*this.order.getTax());
         return res;
     }
 
     public void CancelOrder() {
-        this.orders.getSandwiches().clear();
-        this.orders.getChips().clear();
-        this.orders.getDrinks().clear();
+        this.order.getSandwiches().clear();
+        this.order.getChips().clear();
+        this.order.getDrinks().clear();
     }
 }

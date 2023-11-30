@@ -35,7 +35,7 @@ public class ReceiptFileManager {
             String extraMeat = sandwich.getToppings().isExtraMeats() ? "Extra Meat": "";
 
             details.append(String.format("""
-                    Selected Bread: %-15s -(%-15s)                                  %.2f
+                    Selected Bread: %-15s -%15s                                  %.2f
                     Qty %d
                     
                     Topping:
@@ -66,7 +66,7 @@ public class ReceiptFileManager {
 
         for (Drink drink : receipt.getOrders().getDrinks()) {
             details.append(String.format("""
-                    %-20s -%-10s                                         %.2f
+                    %-10s -%-10s                                         %.2f
                     
                     """,
                     drink.getDrink(),
@@ -94,7 +94,7 @@ public class ReceiptFileManager {
                 -----------------------------------------------------------------
                 
                 Your Total Amount                                        %.2f
-                Tax Amount - (After Applying 15%s on total)              %.2f
+                Tax Amount - (After Applying 15%s on total)              %02.2f
                 
                 ----------------------------------------------------------------
                 Amount after tax                                         %.2f
