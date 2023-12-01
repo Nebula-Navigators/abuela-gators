@@ -7,7 +7,7 @@
 ### Introduction:
 Welcome to the Abuela Gators! Home of the Abuela Gators! Can I take your order?!
 
-Thank you for choosing our deli! This README serves as your guide to exploring the awesome world of our new deli, where flavors meet freshness.
+Thank you for choosing our deli! Just like that, this application takes an order from the customer and prints the receipt. This README serves as your guide to the details of the application.
 
 ### About:
 At Abuela Gators we take pride in crafting a diverse menu inspired by a fusion of culinary traditions.
@@ -20,6 +20,35 @@ Our commitment to quality ingredients and phenomonal service is sure to make you
 - Customers can then customize their sandwich by choosing toppings such as cheese, meats, sauces, and the option to toast their meal.
 - Options to add on chips or drinks of preference is available at an extra cost.
 - Completed orders are then made to customers satisfaction as they are given a receipt and await their purchase.
+
+
+### Getting Started
+#### Requirement
+- Java Development (JDK) installed
+- Environment Variables (Optional): While not strictly necessary, setting the ``JAVA_HOME`` environment variable can be useful. This variable points to the directory where the JDK is installed. Additionally, adding the ```bin ```directory of the JDK to the system's ``PATH`` variable allows you to run Java commands from any location in the terminal or command prompt.
+
+#### Installation
+- git clone [Click me to copy link to clone](https://github.com/Nebula-Navigators/abuela-gators.git)
+- Review the license section
+
+### Quick-Start Guide
+1. Run the program
+  - Open IDE and Open the project and run the program (intelliJ is prefferred)
+  - Using command line (Optional)
+    - Navigate to the project
+     ```
+     cd <path>/abuela-gators
+     ```
+    - Compile all the file
+     ```
+     javac -d out src/**/*.java
+     ```
+    - Run the program
+     ```
+     java -cp out com.pluralsight.AbuelaGators
+     ```
+2. Follow the instructions for user input
+3. See the receipt file under the project **abuela-gators** in the format ".txt"
 
 ### Project Structure
 Our project is organized into several packages and subclasses, each serving a specific purpose for our deli:
@@ -53,7 +82,7 @@ Below packages are the list of package that we used in our project
 | -------- | -------- |
 | ```time```      | To get the real time to create a file '.txt' so that we can save receipt    |
 |```util``` package | To use ArrayList to save sandwich, drinks and chips |
-|com.pluralsight | The package that holds all the classes and enum mentioned in below |
+|```com.pluralsight``` | The package that holds all the classes and enum mentioned in below |
 
 Below are the classes that we have used in our project.
 
@@ -100,30 +129,30 @@ Below are the classes that we have used in our project.
 - ```ChipType```
 
 ### Relationships
-- **AbuelaGators - UserInterface**
+- ```AbuelaGators - UserInterface```
   AbuelaGators is the main class that call UserInterface to start the application. They have one-to-one relationship
-- **UserInterface - Screens Class (HomeScreen, OrderScreen, DrinkScreen, ChipScreen, SandwichScreen, CheckOutScreen)**
-  UserInerface call these class to display menu and get user input. They have One-to-one relationship.
-- **UserInterface - OrderManager**
-  OrderManager get the user input data from UserInterface.
-- **OrderManager - Order**
-  OrderManager handles the data and maintain Order class which includes Sandwich, Drinks and Chips. Calculate the total amount along with the tax. OrderManager can handle many orders so They have One to many relationship.
-- **Order - type classes(Sandwich, Drink and Chip)**
-  Order - Sandwich have one to many relationship. One order can have many sandwiches and similarly goes for drinks and chips.
-- **Receipt - ReceiptFileManager**
-  ReceiptFileManager handles may receipts so it has one to many relationship. ReceiptFileManager creates the Receipt and save it in a particular file in the '.txt' format.
-- **Receipt - Order**
+- ```UserInterface``` - Screens Class (```HomeScreen```, ```OrderScreen```, ```DrinkScreen```, ```ChipScreen```, ```SandwichScreen```, ```CheckOutScreen```)
+  ```UserInerface``` call these class to display menu and get user input. They have One-to-one relationship.
+- ```UserInterface - OrderManager```
+  ```OrderManager``` get the user input data from UserInterface.
+- ```OrderManager - Order```
+  ```OrderManager``` handles the data and maintain Order class which includes ```Sandwich```, ```Drinks``` and ```Chips```. Calculate the total amount along with the tax. ```OrderManager``` can handle many orders so They have One to many relationship.
+- ```Order ```- type classes(```Sandwich```, ```Drink``` and ```Chip```)
+  ```Order``` - ```Sandwich``` have one to many relationship. One order can have many sandwiches and similarly goes for drinks and chips.
+- ```Receipt - ReceiptFileManager```
+  ```ReceiptFileManager``` handles may receipts so it has one to many relationship. ```ReceiptFileManager``` creates the Receipt and save it in a particular file in the '.txt' format.
+- ``Receipt - Order``
   Receipt holds the orders. It has one-to-one relationship
-- **Sandwich - topping**
+- ``Sandwich - topping``
   They have one-to-many relations because a sandwich can have many toppings in it.
-- **Sandwich - enum (BreadType and Size)**
-  They have one-to-one relationship as each sandwich have one enum that is one breadType and one Size.
-- **Drink - enum (DrinkType and Size)**
-  Similar to above they also have one-to-one relationship as drink can have only one enum that is Drinktype and size.
-- **Chip - ChipType**
+- ```Sandwich ```- enum (```BreadType``` and ```Size```)
+  They have one-to-one relationship as each sandwich have one enum that is one ```breadType``` and one ```Size```.
+- ```Drink``` - enum (```DrinkType``` and ```Size```)
+  Similar to above they also have one-to-one relationship as drink can have only one enum that is ```Drinktype``` and ```Size.```
+- ```Chip ```- ```ChipType```
   They also have one-to-one relationship as Chip can have only one ChipType
 
-### Screenshot
+### Screenshots
 
 
 | Home Screen                                                                                                  | Order Menu                                                                                                    | CheckOut Menu                                                                                                    |  Receipt Menu |
@@ -155,34 +184,28 @@ Below are the classes that we have used in our project.
 | --------- | ---- | 
 | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/DrinkMenu.png" width=400>    | <img src = "https://github.com/Nebula-Navigators/abuela-gators/blob/main/screenshot/ChipsMenu.png" width=400> | 
 
-### Installation
-- git clone [Click me to copy link to clone](https://github.com/Nebula-Navigators/abuela-gators.git)
-- Open the project in intelliJ IDE platform
-- Navigate to AbuelaGators class and run the program
-
 
 
 ### Tools we used
 - **intelliJ ultimate** To create UML diagram
-- **app.diagram.net** To modify the UML
+- **appdiagram.net** To modify the UML
 - **Hackmd.io** To collaborate while writing README.md file
 - **Github** for collaboration
 - **Slack** for communication
+
+
+### Contribution
+We Gators welcome all for contribution and creativity. You have to fork the project, add features and send pull request.
+[click me to fork](https://github.com/Nebula-Navigators/abuela-gators/fork)
+
+All contributors will be given credit.
 
 ### Credit
 - **StackOverFlow** for Loading Bar https://stackoverflow.com/questions/852665/command-line-progress-bar-in-java
 - **StackOverFlow** for ANSIColors https://stackoverflow.com/questions/5762491/how-to-print-color-in-console-using-system-out-println
 
-### Getting Started
-- Explore the Menu:Check out our menu to discover a delightful array of sandwiches, chips, and beverages.
-  Place Your Order:
 
-- Customize your selections and place your order with ease.
-
-Track Your Order:
-
-- Keep an eye on your order's journey as your meal is prepped in a quick and steady pace.
-
-- Sit back, relax, and savor the goodness of your freshly prepared deli feast.
+### License
+This project is owned by Nebula-Gators Org. All students are welcome to use this code in their projects, but referencing is strongly suggested. No monetary transactions should be involved.
 
 ***Thank you for choosing Abuela Gators! Enjoy your meal! Get ready to savor the extraordinary! 🍽️***
