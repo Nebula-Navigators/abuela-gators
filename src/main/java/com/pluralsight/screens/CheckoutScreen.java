@@ -1,6 +1,6 @@
 package com.pluralsight.screens;
 
-import com.pluralsight.OrderManager;
+import com.pluralsight.order.OrderManager;
 import com.pluralsight.receipts.Receipt;
 
 import java.util.Scanner;

@@ -1,0 +1,36 @@
+-------------------------------------------------------------
+                            Abuela-Gators
+                            23-34 NewYork, NY
+-------------------------------------------------------------
+Customer name: Hally
+
+                             Receipt
+
+                         Sandwich
+Selected Bread: WRAP -MEDIUM                                        11.10
+Qty 2
+
+Topping:
+Chicken2.0                                          
+Provolone1.5                           Extra Cheese - $0.6
+
+Lettuce
+Tomatoes
+guacamole
+Jalepenos
+Mustard
+sauce
+                        Drinks
+Lemonade   -LARGE                                           3.00
+Qty: 1
+
+Smoothie   -SMALL                                           2.00
+Qty: 1
+
+-----------------------------------------------------------------
+
+Your Total Amount                                        27.20
+Tax Amount - (After Applying 15% on total)               4.08
+
+----------------------------------------------------------------
+Amount after tax                                         31.28

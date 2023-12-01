@@ -1,7 +1,7 @@
 package com.pluralsight.screens;
 
-import com.pluralsight.ANSIColors;
-import com.pluralsight.OrderManager;
+import com.pluralsight.ui.ANSIColors;
+import com.pluralsight.order.OrderManager;
 
 import java.util.Scanner;
 

@@ -1,12 +1,12 @@
 package com.pluralsight.screens;
 
 
-import com.pluralsight.ANSIColors;
-import com.pluralsight.OrderManager;
+import com.pluralsight.ui.ANSIColors;
+import com.pluralsight.order.OrderManager;
 
 import java.util.Scanner;
 
-import static com.pluralsight.ANSIColors.bold;
+import static com.pluralsight.ui.ANSIColors.bold;
 
 public class HomeScreen {
     OrderManager handler = new OrderManager();

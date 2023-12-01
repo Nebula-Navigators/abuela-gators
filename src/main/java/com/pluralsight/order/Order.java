@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.order;
 
 import com.pluralsight.type.chips.Chip;
 import com.pluralsight.type.drink.Drink;

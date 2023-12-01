@@ -1,7 +1,7 @@
 package com.pluralsight.screens;
 
-import com.pluralsight.ANSIColors;
-import com.pluralsight.OrderManager;
+import com.pluralsight.ui.ANSIColors;
+import com.pluralsight.order.OrderManager;
 import com.pluralsight.type.Size;
 import com.pluralsight.type.drink.DrinkType;
 
@@ -117,7 +117,7 @@ public class DrinkScreen {
         int quantity = 0;
 
         while (true) {
-            System.out.println("Quantity of particular sandwich: ");
+            System.out.println("Quantity of particular drink: ");
 
             // Check if the next input is an integer
             if (scanner.hasNextInt()) {

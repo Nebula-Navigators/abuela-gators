@@ -1,6 +1,6 @@
 package com.pluralsight.receipts;
 
-import com.pluralsight.Order;
+import com.pluralsight.order.Order;
 
 public class Receipt {
    private Order orders = new Order();

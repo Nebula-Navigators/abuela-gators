@@ -1,6 +1,7 @@
 
-package com.pluralsight;
+package com.pluralsight.order;
 
+import com.pluralsight.ui.ANSIColors;
 import com.pluralsight.type.chips.Chip;
 import com.pluralsight.type.chips.ChipType;
 import com.pluralsight.type.drink.Drink;
@@ -82,7 +83,7 @@ public class OrderManager {
 //                Store #%d | %s
 //                ---------------------------------------------------------
 //                """, ANSI_CYAN, dummy.getStoreName(), ANSI_RESET, dummy.getStoreAddress());
-        System.out.println("""
+        System.out.println( ANSIColors.blue + ANSIColors.bold + """
                 
                 -----------------Order Summary--------------------------------
                 
@@ -116,25 +117,29 @@ public class OrderManager {
         }
         for(Sandwich sandwich : this.order.getSandwiches())
         {
-            String displayExtra = sandwich.getToppings().isExtraCheese() ? "Extra Meat" : "";
-            String displayExtraCheese = sandwich.getToppings().isExtraCheese() ? "Extra Cheese": "";
+
+            String displayExtra = sandwich.getToppings().isExtraMeats() ? "Extra Meat - $" + sandwich.getSize().getExtraMeatPrice() : "";
+            String displayExtraCheese = sandwich.getToppings().isExtraCheese() ? "Extra Cheese - $" + sandwich.getSize().getExtraCheesePrice(): "";
             System.out.printf("""
-            (Bread: %s - %s)                                         $%.2f
+            (Bread: %s - %s)                                $%.2f
             Qty: %d
             Toppings:
-            %-20s                                 %s
-            %-20s                                 %s
+            %-10s %.2f                              %s
+            %-10s %.2f                              %s
             
             Regular Topping:
             """,
                     sandwich.getBread(),
                     sandwich.getSize(),
-                    sandwich.getPrice(),
+                    sandwich.getPrice() * sandwich.getQuantity(),
                     sandwich.getQuantity(),
                     sandwich.getToppings().getMeats(),
+                    sandwich.getSize().getMeatPrice(),
                     displayExtra,
                     sandwich.getToppings().getCheese(),
-                    displayExtraCheese
+                    sandwich.getSize().getCheesePrice(),
+                    displayExtraCheese,
+                    sandwich.getPrice()
             );
             for(String regularTopping: sandwich.getToppings().getRegularToppings())
             {
@@ -191,7 +196,7 @@ public class OrderManager {
         for(Chip chip: this.order.getChips())
         {
             System.out.printf("""
-                    %-20s                                             %.2f
+                    %-20s                                      %.2f
                     """,
                     chip.getChipName(),
                     chip.getPrice()
@@ -221,7 +226,7 @@ public class OrderManager {
         double res = 0.00;
         for(Sandwich s: this.order.getSandwiches())
         {
-           res += s.getPrice();
+           res += (s.getPrice() *s.getQuantity()) ;
         }
         return res;
     }
@@ -231,7 +236,7 @@ public class OrderManager {
         double res = 0.00;
         for(Drink d: this.order.getDrinks())
         {
-            res += d.getPrice();
+            res += (d.getPrice());
         }
         return res;
     }

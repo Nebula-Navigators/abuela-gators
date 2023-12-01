@@ -31,18 +31,20 @@ public class ReceiptFileManager {
         }
 
         for (Sandwich sandwich : receipt.getOrders().getSandwiches()) {
-            String extraCheese = sandwich.getToppings().isExtraCheese() ? "Extra Cheese" : "";
-            String extraMeat = sandwich.getToppings().isExtraMeats() ? "Extra Meat": "";
+            String extraCheese = sandwich.getToppings().isExtraCheese() ? "Extra Cheese - $" + sandwich.getSize().getExtraCheesePrice() : "";
+            String extraMeat = sandwich.getToppings().isExtraMeats() ? "Extra Meat - $" + sandwich.getSize().getExtraMeatPrice() : "";
+            String displayMeat = sandwich.getToppings().getMeats().toString() +"- $"+ sandwich.getSize().getMeatPrice();
+            String displayCheese = sandwich.getToppings().getCheese().toString() +"- $"+ sandwich.getSize().getCheesePrice();
 
             details.append(String.format("""
-                    Selected Bread: %s -%-15s                                  %.2f
+                    Selected Bread: %s -%-15s                               %.2f
                     Qty %d
                     
                     Topping:
-                    %-15s                           %-15s
-                    %-15s                           %-15s
+                    %-10s                           %-15s
+                    %-10s                           %-15s
                     
-                    """, sandwich.getBread(), sandwich.getSize(), sandwich.getPrice(), sandwich.getQuantity(),sandwich.getToppings().getMeats(), extraMeat, sandwich.getToppings().getCheese(), extraCheese));
+                    """, sandwich.getBread(), sandwich.getSize(), sandwich.getPrice(), sandwich.getQuantity(),displayMeat, extraMeat, displayCheese, extraCheese));
 
             for (String regularTopping : sandwich.getToppings().getRegularToppings()) {
                 details.append(regularTopping).append("\n");
@@ -85,7 +87,7 @@ public class ReceiptFileManager {
 
         for (Chip chip : receipt.getOrders().getChips()) {
             details.append(String.format("""
-                    %-20s                                             %.2f
+                    %-20s                                         %.2f
                     
                     """,
                     chip.getChipName(),
@@ -100,7 +102,7 @@ public class ReceiptFileManager {
                 
                 ----------------------------------------------------------------
                 Amount after tax                                         %.2f
-                """, receipt.getOrders().getTotal(), "%", receipt.getOrders().getTotal()*receipt.getOrders().getTotal(), receipt.getOrders().getTotal()+ (receipt.getOrders().getTotal()*receipt.getOrders().getTotal())));
+                """, receipt.getOrders().getTotal(), "%", receipt.getOrders().getTotal()*receipt.getOrders().getTax(), receipt.getOrders().getTotal()+ (receipt.getOrders().getTotal()*receipt.getOrders().getTax())));
 
         try (FileWriter writer = new FileWriter(nameOfFile + ".txt", true)) {
             writer.write(header + details.toString());
